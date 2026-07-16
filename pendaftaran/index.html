@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Ekstrakurikuler</title>
+</head>
+<body>
+
+    <div class="box-judul">
+        <h1>Formulir Pendaftaran Pondok</h1>
+    </div>
+
+    <form action="proses.php" method="post">
+        <h2>Data Diri Santri</h2>
+
+        <p>
+            <label for="nama-lengkap">Nama Lengkap:</label><br>
+            <input type="text" id="nama-lengkap" name="nama-lengkap" placeholder="Contoh: Ahmad Mubarok" required>
+        </p>
+
+        <p>
+            <label for="kelas">Kelas Saat Ini:</label><br>
+            <select name="kelas" id="kelas" required>
+                <option value="">-- Pilih Kelas Saat Ini --</option>
+                <option value="Kelas 7">Kelas 7</option>
+                <option value="Kelas 8">Kelas 8</option>
+                <option value="Kelas 9">Kelas 9</option>
+                <option value="Kelas 10">Kelas 10</option>
+                <option value="Kelas 11">Kelas 11</option>
+                <option value="Kelas 12">Kelas 12</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="alamat-email">Alamat Email:</label><br>
+            <input type="email" name="alamat-email" id="alamat-email" placeholder="Contoh: dani@gmail.com" required>
+        </p>
+
+        <p>
+            <label for="nomor-hp">Nomor HP:</label><br>
+            <input type="tel" name="nomor-hp" id="nomor-hp" placeholder="Contoh: +6285245758777" required>
+        </p>
+
+        <p>
+            <label for="tanggal-lahir">Tanggal Lahir:</label><br>
+            <input type="date" name="tanggal-lahir" id="tanggal-lahir" required>
+        </p>
+
+        <p>
+            <label>Jenis Kelamin:</label><br>
+            <label><input type="radio" name="jenis-kelamin" value="laki-laki" required> Laki-laki</label>
+            <label style="margin-left: 15px;"><input type="radio" name="jenis-kelamin" value="perempuan" required> Perempuan</label>
+        </p>
+
+        <p>
+            <span class="label-title">Ekstrakurikuler yang Diikuti:</span><br>
+            <label><input type="checkbox" name="ekstra[]" value="bahasa arab"> Bahasa Arab</label><br>
+            <label><input type="checkbox" name="ekstra[]" value="karate"> Karate</label><br>
+            <label><input type="checkbox" name="ekstra[]" value="futsal"> Futsal</label><br>
+            <label><input type="checkbox" name="ekstra[]" value="coding"> Coding</label><br>
+        </p>
+
+        <p>
+            <label for="alasan">Alasan Mengikuti Ekstrakurikuler:</label><br>
+            <textarea name="alasan" id="alasan" rows="4" cols="50" placeholder="Tulis alasan Anda di sini...." required></textarea>
+        </p>
+
+        <button type="submit">Daftar Sekarang</button>
+    </form>
+</body>
+</html>
